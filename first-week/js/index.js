@@ -104,3 +104,131 @@ chars.pop()
 chars.pop()
 chars.unshift('B')
 console.log(chars)
+
+
+//
+//Desafio da calculadora
+//op 1
+function sum(){
+    const formData = new FormData(document.querySelector('form'))
+    const n1 = formData.get('n1')
+    const n2 = formData.get('n2')
+    console.log(n1+' '+n2)
+}
+
+
+// object literals
+
+const product = {
+    productName: 'Camisa',
+    price: 29.99,
+    inStock: true,
+    size: ['p', 'm', 'g'],
+    'main color': 'red'
+}
+console.log(product.size[product.size.length-1])
+console.log(product['price'])
+//quando for uma label usar a versão a baixo não o .
+console.log(product['main color'])
+
+//destructuring - desestruturação
+let {productName, price } = product //virá constante então não pode mudar o tipo mas pode
+console.log(price)
+price = 30.48
+console.log(price)
+
+const vector = [3,7,2,99]
+let [ v1, v2, ...outrovetor] = vector
+console.log(outrovetor)
+
+//JSON - JavaScript Object Notation
+//XML é concorrente do JSON
+
+//criando o objeto cachorro
+
+const dog = {
+    name: 'Scooby',
+    age: 10
+}
+
+console.log(dog)
+const dogJson = JSON.stringify(dog)
+console.log(dogJson)
+const dogObject = JSON.parse(dogJson)
+console.log(dogObject)
+
+// const jsonErrado = '{"primeiro":"dado1","segundo":222,"terceiro":"dado3}'
+// const jsonErradoObject = JSON.parse(jsonErrado)
+// console.log
+
+//desafio 2 
+// const vectorDes2 = [3,7,2,99,52]
+
+// const objectDes2 = {
+//     n1: vectorDes2[1],
+//     n2: vectorDes2[2],
+//     n3: vectorDes2[3],
+//     n4: vectorDes2[4],
+//     n5: vectorDes2[5]
+// }
+
+// let {n1, n2, n3, n4, n5} = objectDes2
+
+// const jsonDes2 = '{"number1":"'+n1+'","number2":"'+n2+'","number3":"'+n3+'","number4":"'+n4+'","number5":"'+n5+'"}'
+// const testObject = JSON.parse(jsonDes2)
+// console.log('deu certo veja'+jsonDes2)
+
+// //desafio 3
+// let valor1 = 2
+// let valor2 = 5
+// let calculadora = {
+//     sum: valor1+valor2,
+//     sub: valor1-valor2,
+//     div: valor1/valor2,
+//     mul: valor1*valor2
+// }
+// console.log(calculadora)
+
+// const calculadoraJson = JSON.stringify(calculadora)
+// console.log(calculadoraJson)
+
+
+
+//resposta prof
+const vectorChallenge = [77,45,3,8,123]
+const objectChallenge = {
+    n1: vectorChallenge[1],
+    n2: vectorChallenge[2],
+    n3: vectorChallenge[3],
+    n4: vectorChallenge[4],
+    n5: vectorChallenge[5]
+}
+const {n1, n2, n3, n4, n5} = objectChallenge
+
+console.log(JSON.stringify({n1,n2,n3,n4,n5}))
+const num1 = 10
+const num2 = 20
+const calc = {
+    soma: num1+num2,
+    sub: num1-num2,
+    mult: num1/num2,
+    div: num1*num2,
+}
+ console.log(JSON.stringify(calc))
+
+
+
+ //operador ternario
+ const resultado = n > 20 ? true : false
+//while
+let contador=0
+const lista = [1, 7, 3, 64, 2, 0] 
+while(contador < lista.length){
+    console.log('O \'elemento\' da\n vez é'+ lista[contador] + '.')
+    contador++ 
+}
+
+const outraLista = ['a', 'b', 'c', 'd', 'e']
+for(let contador = 0; contador < outraLista.length; contador++)
+    console.log(`O elemento da
+     vez é ${outraLista[contador]}.`)
