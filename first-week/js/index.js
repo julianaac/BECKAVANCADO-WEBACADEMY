@@ -162,35 +162,9 @@
 // // console.log
 
 // //desafio 2 
-// // const vectorDes2 = [3,7,2,99,52]
 
-// // const objectDes2 = {
-// //     n1: vectorDes2[1],
-// //     n2: vectorDes2[2],
-// //     n3: vectorDes2[3],
-// //     n4: vectorDes2[4],
-// //     n5: vectorDes2[5]
-// // }
-
-// // let {n1, n2, n3, n4, n5} = objectDes2
-
-// // const jsonDes2 = '{"number1":"'+n1+'","number2":"'+n2+'","number3":"'+n3+'","number4":"'+n4+'","number5":"'+n5+'"}'
-// // const testObject = JSON.parse(jsonDes2)
-// // console.log('deu certo veja'+jsonDes2)
 
 // // //desafio 3
-// // let valor1 = 2
-// // let valor2 = 5
-// // let calculadora = {
-// //     sum: valor1+valor2,
-// //     sub: valor1-valor2,
-// //     div: valor1/valor2,
-// //     mul: valor1*valor2
-// // }
-// // console.log(calculadora)
-
-// // const calculadoraJson = JSON.stringify(calculadora)
-// // console.log(calculadoraJson)
 
 
 
@@ -290,12 +264,10 @@ console.log(myFuction('Paulo', 'Sampaio'))
 // const myArrowFuction = (a,b)=> a+b
 // console.log(myArrowFuction(5,2))
 
-//desafio 2
+//desafio 4
 
 
 
-// const varFor = ()=> ((X=7) => (X+5))
-// console.log(varFor())
 
 // const varFor = ()=> ((X=7) => (X+5))
 // console.log(varFor())
@@ -377,4 +349,4 @@ texts[1].style.backgroundColor = 'red'
 texts[2].remove()
 
 const button = document.querySelector('#btn')
-button.addEventListener('click',()=>(texts[3].style.backgroundColor = 'green'))
+button.addEventListener('click',()=>(texts[3].style.backgroundColor = 'orange'))
