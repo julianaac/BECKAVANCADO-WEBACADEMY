@@ -16,6 +16,9 @@ function writeFile(cb){
 http.createServer((req, res) => {
     // res.end(JSON.stringify(data))
     const {name, url, del} = URL.parse(req.url, true).query//query diz que quero o conteúdo que vem após a interrogação
+    res.writeHead(200, {
+        'Access-Control-Allow-Origin': '*'
+    })
     //ATENÇÃO A função pode vim AQUI
     //Mostra o conteudo no JSON
     if(!name || !url)
